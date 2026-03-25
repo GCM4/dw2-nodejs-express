@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    line-height: 30px;
+}
+header {
+    background-color: rgb(71, 71, 71);
+}
+header h1 {
+    color: white;
+    text-align: center;
+}
+main {
+    min-height: 100vh;
+}
+footer {
+    text-align: center;
+}
+footer p {
+    text-align: center;
+}
