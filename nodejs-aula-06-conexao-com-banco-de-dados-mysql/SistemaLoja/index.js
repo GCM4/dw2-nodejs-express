@@ -18,6 +18,15 @@ connection.authenticate()
         console.error(`Erro ao conectar com o banco de dados:", ${error}`);
     });
 
+    connection.query("CREATE DATABASE IF NOT EXISTS SistemaLoja;")
+    .then(() => {
+        console.log("O banco de dados 'SistemaLoja' foi criado!")
+    })
+    .catch((error) => {
+        console.error(`Ocorreu um erro ao criar o banco de dados:", ${error}`);
+    });
+
+    
 const app = express() 
 // Define o EJS como Renderizador de páginas
 app.set('view engine', 'ejs')

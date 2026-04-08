@@ -3,6 +3,9 @@ import express from 'express';
 // Método Router do Express para criar rotas de aplicação
 const router = express.Router();
 
+// Importando o Model de Cliente
+import Cliente from '../models/Cliente.js'
+
 // ROTA CLIENTES
 router.get("/clientes",function(req,res){
     const clientes = [

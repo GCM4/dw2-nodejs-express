@@ -3,6 +3,8 @@ import express from 'express';
 // Método Router do Express para criar rotas de aplicação
 const router = express.Router();
 
+import Pedido from '../models/Pedido.js'
+
 router.get("/pedidos",function(req,res){
     const pedidos = [
         {numero: "983721931", valor: 1200},
