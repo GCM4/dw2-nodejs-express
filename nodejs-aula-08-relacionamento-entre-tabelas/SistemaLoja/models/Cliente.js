@@ -3,7 +3,7 @@ import connection from "../config/sequelize-config.js";
 
 //criando o Model
 // O método define() do sequelize cria uma tabela no BD
-const Cliente = connection.define("Cliente", {
+const Cliente = connection.define("clientes", {
     nome: {
         type: sequelize.STRING,
         allowNull: false,},
@@ -16,5 +16,7 @@ const Cliente = connection.define("Cliente", {
 })
 // método sync() sincroniza os dados com o banco
 // force: false : não recria a tabela caso já exista
-Cliente.sync({force: false});
+
+// Cliente.sync({force: false});
+
 export default Cliente;

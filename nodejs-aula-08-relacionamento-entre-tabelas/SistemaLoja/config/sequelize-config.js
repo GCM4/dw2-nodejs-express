@@ -9,7 +9,7 @@ const connection = new Sequelize({
     username: "root",
     password: "",
     timezone: "-03:00",
-    database: "SistemaLoja"
+    database: "loja_relacional"
 })
 // Exportando o módulo
 export default connection;
