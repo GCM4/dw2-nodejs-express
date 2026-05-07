@@ -4,6 +4,35 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
+                <h1>Cadastrar Pedido</h1>
+            </div>
+            <div class="card-body">
+                <form action="/pedidos/cadastrar" method="POST">
+                    <div class="mb-3">
+                        <label for="numero" class="form-label">Número do Pedido:</label>
+                        <input type="text" class="form-control" name="numero" required class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="valor" class="form-label">Valor do Pedido:</label>
+                        <input type="text" class="form-control" name="valor" required class="form-control" placeholder="Insira o valor do pedido">
+
+                        <label>Cliente</label>
+                        <select name="clienteId" id="" class="form-control">
+                            <option value="" selected disabled>Selecione um cliente</option>
+                            <% clientes.forEach(cliente => { %>
+                                <option value="<%= cliente.id %>"><%= cliente.nome %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
                 <h1>Pedidos</h1>
             </div>
             <div class="card-body">
